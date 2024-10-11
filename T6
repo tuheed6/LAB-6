@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+#define PRICE_PER_LITER 1.50
+
+int main() {
+    int liters;
+    float totalCost;
+    char choice;
+
+    do {
+        printf("Enter the number of liters of fuel you want to purchase: ");
+        scanf("%d", &liters);
+
+        totalCost = liters * PRICE_PER_LITER;
+        printf("Total cost: $%.2f\n", totalCost);
+
+        printf("Do you want to continue purchasing fuel? (y/n): ");
+        scanf(" %c", &choice);
+    } while (choice == 'y' || choice == 'Y');
+
+    printf("Thank you for using the fuel pump!\n");
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+ #include <stdio.h>
+
+int main() {
+   int counter=0,inputPIN,PIN=6969;
+ 
+ printf("Enter your PIN(XXXX): ");
+    scanf("%d", &inputPIN);
+
+ 
+   while(counter<3){
+    
+    if(inputPIN==PIN){
+        printf("Acess Granted");
+        break;
+    }
+    else{
+     printf("Enter Number Another Guess: ");
+         scanf("%d", &inputPIN);
+     counter = counter + 1;
+    }
+    if(counter==3)
+       printf("Account locked");
+    
+   }
+   
+    return 0;
+}
+       
+       
+      
